@@ -1,0 +1,145 @@
+/*
+BASE STYLES
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  background-color: #fff;
+  color: #222;
+  line-height: 1.6;
+}
+
+/*
+TYPOGRAPHY SCALE
+*/
+h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+h2 { font-size: 1.8rem; margin-bottom: 0.75rem; }
+p  { font-size: 1rem; margin-bottom: 1rem; }
+
+nav {
+  background: #0b72ff;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 1rem;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+}
+nav a:hover,
+nav a:focus {
+  background: #0646a1; 
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  background: #f3f3f3;
+}
+.hero h1 {
+  color: #0b72ff;
+}
+.hero .eyebrow {
+  color: #ff6b6b;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+.hero img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/*
+SECTIONS
+*/
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+.card {
+  background: #fff;
+  padding: 1.25rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  margin-bottom: 1.5rem;
+}
+.lead {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.cta-strip {
+  background: #0b72ff;
+  color: #fff;
+  padding: 1.5rem;
+  text-align: center;
+  border-radius: 10px;
+}
+.cta-strip p {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.btn, button {
+  background: #0b72ff;
+  color: #fff;
+  padding: 0.7rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+.btn:hover, button:hover,
+.btn:focus, button:focus {
+  background: #0646a1;
+  transform: translateY(-2px);
+}
+
+.responsive-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/*
+RESPONSIVE DESIGN
+*/
+@media (max-width: 1024px) {
+  .hero {
+    grid-template-columns: 1fr; 
+    text-align: center;
+  }
+  .hero img {
+    order: -1; /* show image first */
+  }
+}
+@media (max-width: 640px) {
+  nav ul {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .hero h1 {
+    font-size: 2rem;
+}
+
+
